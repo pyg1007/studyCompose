@@ -2,6 +2,7 @@ package com.compose.myapplication
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
@@ -43,15 +44,15 @@ fun Greeting(name: String) {
 fun DefaultPreview() {
     MyApplicationTheme {
         // Greeting("Android") // Text
-        // MultipleColumnText() // 열로 정렬된 text
+         MultipleColumnText() // 열로 정렬된 text
         // MultipleRowText() // 행으로 정렬된 text
         // ColumnWithRowText() // 행과 열로 정렬된 text
     }
 }
 
 @Composable
-fun MultipleColumnText(){
-    Column(Modifier.padding(5.dp)) {
+fun MultipleColumnText(onclick: () -> Unit){
+    Column(Modifier.clickable(onclick = onclick).padding(5.dp)) {
         Text(text = "Hello")
         Text(text = "This text is column")
         Text(text = "sorted")
