@@ -10,7 +10,7 @@ UI개발을 간소화하고 가속화합니다.
 
 Android를 위한 선언형 UI도구 키드이며, FrontEnd View를 명령형으로 변형하지 않고 렌더링할 수 있게하는 선언형 API를 제공하여 앱 UI를 더 쉽게 작성하고 유지관리를 할 수 있도록 지원합니다.
 
-### 선언형 프로그래밍
+### 선언형 프로그래밍 패러다임
 
 지금 사용하는 android 뷰 계층 구조는 트리로 표시할수 있습니다.
 
@@ -34,3 +34,15 @@ fun Greeting(name: String){
 
 - Text()
 	- 실제로 텍스트 UI요소를 생성하는 역할
+
+### 선언형 패러다임 전환
+
+선언형 접근 방식에서 위젯은 스테이트리스 형태이며 setter 또는 getter 함수를 노출하지 않습니다.
+
+위젯은 객체로 노출되지않으며 동일한 구성 가능한 함수를 다른 인수로 호출하여 UI를 업데이트 합니다.
+
+MVVM과 같은 아키텍처 패턴에 쉽게 적용가능합니다.
+
+# 참고
+
+[android developer](https://developer.android.com/jetpack/compose/mental-model?hl=ko)
